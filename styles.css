@@ -101,7 +101,17 @@ a:hover{
 
 .logo img {
     max-width: 80%;
-    margin-bottom: 30px;
+    border: none;
+    background: transparent;
+}
+.logo-link {
+    background: transparent;
+    border: none;
+}
+.logo-link img {
+    display: block; /* Remove space below the image */
+    margin: 0;
+    padding: 0;
 }
 
 .nav {
@@ -263,7 +273,7 @@ a:hover{
     color: #fff;
     border-radius: 5px;
     text-decoration: none;
-    float: right;
+    
     margin-right: 10px;
 }
 

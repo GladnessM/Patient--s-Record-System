@@ -6,7 +6,7 @@ if (isset($_SESSION['patient_id']) && isset($_SESSION['username'])) {
     require_once 'db_connect.php';
     $patient_id = $_SESSION['patient_id'];
 
-    
+
 
     // Handle booking an appointment
     if (isset($_POST['book'])) {
@@ -56,7 +56,9 @@ if (isset($_SESSION['patient_id']) && isset($_SESSION['username'])) {
     <body class="appointments-page">
         <div class="sidebar">
             <div class="logo">
+                <a href="home.php" class="logo-link">
                 <img src="/resources/logo-removebg-preview.png" alt="Logo">
+                </a>
             </div>
             <div class="nav">
                 <a href="appointments.php">Appointments</a>

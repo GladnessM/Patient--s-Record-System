@@ -44,7 +44,9 @@ if (isset($_SESSION['patient_id']) && isset($_SESSION['username'])) {
     <body>
         <div class="sidebar">
             <div class="logo">
+                <a href="home.php" class="logo-link">
                 <img src="/resources/logo-removebg-preview.png" alt="Logo">
+                </a>
             </div>
             <div class="nav">
                 <a href="appointments.php">Appointments</a>
