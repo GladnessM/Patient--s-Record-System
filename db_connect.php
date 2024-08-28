@@ -16,7 +16,7 @@
     {
         die("Connection Error: ". $mysqli->connect_error);
     }
-    echo "Connected successfully";
+    //echo "Connected successfully";
 
     return $mysqli;
 ?>

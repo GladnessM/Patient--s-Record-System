@@ -1,27 +1,29 @@
 body{
-    background-color:#97c9eb;
+    background-color:#f0f4f8;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     flex-direction: column;
+    font-family: 'Roboto', sans-serif;
 }
 
 *{
-    font-family: sans-serif;
     box-sizing: border-box;
 }
-form{
+.login-container form{
     width: 500px;
     border: 2px solid #ccc;
     padding: 30px;
     background-color: #fff;
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    height: 300px;
+
 }
 
 h2{
-    text-align: center;
+    text-align: left;
     margin-bottom: 40px;
 }
 input{
@@ -39,15 +41,21 @@ label{
 }
 button{
     float: right;
-    background: #555;
+    background-color: #4CAF50;
     padding: 10px 20px;
     color: #fff;
     border-radius: 5px;
     margin-right: 10px;
     border: none;
+    cursor: pointer;
+    transition: background-color .3s ease;
+    height: 50px;
+    width: 100px;
+    align-content: center;
 }
 button:hover{
-    opacity: .7;
+    background-color: #45a049;
+    opacity: .9;
 }
 
 .error {
@@ -76,4 +84,306 @@ a {
 }
 a:hover{
 	opacity: .7;
+}
+/* Sidebar styling */
+.sidebar {
+    width: 230px;
+    background-color: #2e3b4e;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 80%;
+    margin-bottom: 30px;
+}
+
+.nav {
+    width: 50%;
+}
+.nav a {
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    padding: 15px 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.nav a:hover {
+    background-color: #1b2a38;
+}
+
+/* Main content styling */
+.main-content {
+    margin-left: 240px; /* Adjusted margin to accommodate sidebar */
+    padding: 40px;
+    width: calc(100% - 240px);
+    background-color: #fff;
+    min-height: 100vh;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.back-to-dashboard {
+    font-size: 14px;
+    color: #333;
+    text-decoration: none;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile span {
+    margin-right: 10px;
+    color: #333;
+}
+
+.profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.current-appointment {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.appointment-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.patient-photo {
+    text-align: center;
+}
+
+.patient-photo img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.update-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00aaff;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.update-button:hover {
+    background-color: #008fcc;
+}
+
+.patient-details {
+    flex: 1;
+    margin-left: 40px;
+    
+}
+
+.patient-details h3 {
+    margin-bottom: 10px;
+}
+
+.update-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00aaff;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.update-button:hover {
+    background-color: #008fcc;
+}
+
+/* Records section */
+.records-section {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+.records-section h4 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.record-item {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f0f4f8;
+    border-radius: 5px;
+}
+
+.download-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00aaff;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    position: absolute;
+    left: 270px;
+    bottom: 140px;
+}
+.download-link:hover {
+    background-color: #008fcc;
+}
+
+/* Logout button */
+.logout-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #555;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    float: right;
+    margin-right: 10px;
+}
+
+.logout-link:hover {
+    background-color: #333;
+}
+
+/* Appointment List Styles */
+.appointment-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.appointment-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.appointment-item:last-child {
+    margin-bottom: 0;
+}
+
+.appointment-details {
+    flex-grow: 1;
+}
+
+.delete-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+    background-color: #c82333;
+}
+
+/* Specific styles for Appointments and Settings pages */
+.appointments-page .appointment-info {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 4px;
+}
+.appointments-page .form-section {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+.appointments-page form {
+    margin-top: 20px;
+}
+
+.appointments-page form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.appointments-page form input, 
+.appointments-page form select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: calc(100% - 18px); /* Adjust for padding and border */
+}
+
+.appointments-page form button {
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.appointments-page form button:hover {
+    background-color: #218838;
+}
+
+.settings-page .form-section {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 4px;
+}
+.settings-page form {
+    margin-top: 20px;
+}
+
+.settings-page .form-section label {
+    display: block;
+    margin-bottom: 5px;
+}
+.settings-page form input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: calc(100% - 18px); /* Adjust for padding and border */
+}
+
+.settings-page form button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.settings-page form button:hover {
+    background-color: #0056b3;
 }
